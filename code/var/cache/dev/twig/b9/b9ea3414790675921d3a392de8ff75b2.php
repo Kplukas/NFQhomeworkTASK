@@ -56,30 +56,24 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         // line 4
-        echo "    <main>
+        echo "    
+<main>
         <div class=\"py-5 bg-light\">
             <div class=\"container\">
                 <div class=\"py-5 text-center\">
                     <h1 class=\"fw-bold\">";
-        // line 8
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 8, $this->source); })()), "title", [], "any", false, false, false, 8), "html", null, true);
+        // line 9
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 9, $this->source); })()), "title", [], "any", false, false, false, 9), "html", null, true);
         echo "</h1>
                     <p class=\"text-muted\">X minutes</p>
                 </div>
-
-                <img class=\"img-fluid\" src=\"";
+                ";
         // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 12, $this->source); })()), "image", [], "any", false, false, false, 12), "html", null, true);
-        echo "\" alt=\"\">
-
-                <div class=\"lead mb-4 py-5\">";
-        // line 14
-        echo twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 14, $this->source); })()), "text", [], "any", false, false, false, 14);
-        echo "</div>
-
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form');
+        echo "
                 <div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
                     <a href=\"";
-        // line 17
+        // line 14
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Back</a>
                 </div>
@@ -104,7 +98,7 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
 
     public function getDebugInfo()
     {
-        return array (  83 => 17,  77 => 14,  72 => 12,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  77 => 14,  72 => 12,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -112,25 +106,21 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block main %}
-    <main>
+    
+<main>
         <div class=\"py-5 bg-light\">
             <div class=\"container\">
                 <div class=\"py-5 text-center\">
                     <h1 class=\"fw-bold\">{{ article.title }}</h1>
                     <p class=\"text-muted\">X minutes</p>
                 </div>
-
-                <img class=\"img-fluid\" src=\"{{ article.image }}\" alt=\"\">
-
-                <div class=\"lead mb-4 py-5\">{{ article.text | raw }}</div>
-
+                {{ form(form) }}
                 <div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
                     <a href=\"{{ path('home') }}\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Back</a>
                 </div>
             </div>
         </div>
     </main>
-{% endblock %}
-", "pages/edit.html.twig", "C:\\xampp\\htdocs\\homework-main\\code\\templates\\pages\\edit.html.twig");
+{% endblock %}", "pages/edit.html.twig", "C:\\xampp\\htdocs\\homework-main\\code\\templates\\pages\\edit.html.twig");
     }
 }

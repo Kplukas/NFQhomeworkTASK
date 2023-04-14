@@ -67,7 +67,7 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
         echo "\" class=\"btn btn-sm btn-outline-secondary\">View</a>
                 <a href=\"";
         // line 15
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_new");
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 15, $this->source); })()), "id", [], "any", false, false, false, 15)]), "html", null, true);
         echo "\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
 
@@ -114,7 +114,7 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
         <div class=\"d-flex justify-content-between align-items-center\">
             <div class=\"btn-group\">
                 <a href=\"{{ path('article_view', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">View</a>
-                <a href=\"{{ path('article_new') }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
+                <a href=\"{{ path('article_edit', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
             </div>
 
             <small class=\"text-muted\">
