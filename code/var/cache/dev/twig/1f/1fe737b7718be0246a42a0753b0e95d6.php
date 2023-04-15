@@ -72,7 +72,10 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
             </div>
 
             <small class=\"text-muted\">
-                X mins
+                ";
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 19, $this->source); })()), "getX", [], "method", false, false, false, 19), "html", null, true);
+        echo " mins
             </small>
         </div>
     </div>
@@ -95,7 +98,7 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  70 => 15,  66 => 14,  57 => 9,  55 => 8,  49 => 5,  44 => 3,  40 => 1,);
+        return array (  77 => 19,  70 => 15,  66 => 14,  57 => 9,  55 => 8,  49 => 5,  44 => 3,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -118,7 +121,7 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
             </div>
 
             <small class=\"text-muted\">
-                X mins
+                {{article.getX()}} mins
             </small>
         </div>
     </div>

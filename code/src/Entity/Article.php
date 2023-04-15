@@ -78,4 +78,26 @@ class Article
     {
         $this->image = $image;
     }
+    /**
+     * @return string|null
+     */
+    public function getX(): ?string
+    {
+        $words = array_filter(explode(' ', $this->text), function($word){
+            return strlen($word) > 3;
+        });
+        $x = 0;
+        foreach ($words as $word) {
+            if (strlen($word) > 3){
+                ++$x;
+            }
+        }
+        $minutes = $x / 200;
+        return round($minutes, 1);
+    }
+
 }
+
+
+
+
