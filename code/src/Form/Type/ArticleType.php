@@ -15,7 +15,7 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('title', TextType::class)
-            ->add('text', TextareaType::class)
+            ->add('text', TextareaType::class, ['attr' => ['rows' => '6']])
             ->add('image', TextType::class)
             ->add('save', SubmitType::class)
         ;

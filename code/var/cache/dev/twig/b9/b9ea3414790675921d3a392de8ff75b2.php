@@ -56,24 +56,31 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         // line 4
-        echo "    
+        echo "    <section class=\"py-5 text-center container\">
+        <div class=\"row\">
+            <div class=\"col-lg-6 col-md-8 mx-auto\">
+                <h1 class=\"fw-light\">Edit Article</h1>
+            </div>
+        </div>
+    </section>
+    
 <main>
         <div class=\"py-5 bg-light\">
             <div class=\"container\">
                 <div class=\"py-5 text-center\">
                     <h1 class=\"fw-bold\">";
-        // line 9
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 9, $this->source); })()), "title", [], "any", false, false, false, 9), "html", null, true);
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "title", [], "any", false, false, false, 16), "html", null, true);
         echo "</h1>
                     <p class=\"text-muted\">X minutes</p>
                 </div>
                 ";
-        // line 12
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form');
+        // line 19
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'form');
         echo "
                 <div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
                     <a href=\"";
-        // line 14
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Back</a>
                 </div>
@@ -98,7 +105,7 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
 
     public function getDebugInfo()
     {
-        return array (  77 => 14,  72 => 12,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  84 => 21,  79 => 19,  73 => 16,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -106,6 +113,13 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block main %}
+    <section class=\"py-5 text-center container\">
+        <div class=\"row\">
+            <div class=\"col-lg-6 col-md-8 mx-auto\">
+                <h1 class=\"fw-light\">Edit Article</h1>
+            </div>
+        </div>
+    </section>
     
 <main>
         <div class=\"py-5 bg-light\">

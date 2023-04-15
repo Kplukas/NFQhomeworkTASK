@@ -1,12 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
+    <section class="py-5 text-center container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Article</h1>
+            </div>
+        </div>
+    </section>
     <main>
         <div class="py-5 bg-light">
             <div class="container">
                 <div class="py-5 text-center">
                     <h1 class="fw-bold">{{ article.title }}</h1>
-                    <p class="text-muted">X minutes</p>
+                    <p class="text-muted">{{article.getX()}} minutes</p>
                 </div>
 
                 <img class="img-fluid" src="{{ article.image }}" alt="">
@@ -15,6 +22,7 @@
 
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <a href="{{ path('home') }}" type="button" class="btn btn-secondary btn-lg px-4 gap-3">Back</a>
+                    <a href="{{ path('article_edit', {id: article.id}) }}" type="button" class="btn btn-info btn-lg px-4 gap-3">Edit</a>
                 </div>
             </div>
         </div>
