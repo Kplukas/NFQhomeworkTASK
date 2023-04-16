@@ -72,7 +72,10 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
         // line 16
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "title", [], "any", false, false, false, 16), "html", null, true);
         echo "</h1>
-                    <p class=\"text-muted\">X minutes</p>
+                    <p class=\"text-muted\">";
+        // line 17
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 17, $this->source); })()), "getX", [], "method", false, false, false, 17), "html", null, true);
+        echo " mins</p>
                 </div>
                 ";
         // line 19
@@ -105,7 +108,7 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
 
     public function getDebugInfo()
     {
-        return array (  84 => 21,  79 => 19,  73 => 16,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  87 => 21,  82 => 19,  77 => 17,  73 => 16,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -126,7 +129,7 @@ class __TwigTemplate_5b52edfde7e79fed144bb31ff8302c72 extends Template
             <div class=\"container\">
                 <div class=\"py-5 text-center\">
                     <h1 class=\"fw-bold\">{{ article.title }}</h1>
-                    <p class=\"text-muted\">X minutes</p>
+                    <p class=\"text-muted\">{{article.getX()}} mins</p>
                 </div>
                 {{ form(form) }}
                 <div class=\"d-grid gap-2 d-sm-flex justify-content-sm-center\">
